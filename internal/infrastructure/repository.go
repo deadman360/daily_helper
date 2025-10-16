@@ -1,20 +1,23 @@
 package infrastructure
 
+import (
+	"database/sql"
+
+	"github.com/deadman360/daily_helper/internal/infrastructure/task_repository"
+)
+
 type repository struct {
-	basePath string
+	task_repository.ITaskRepository
 }
 
 type IRepository interface {
-	Create(string)
-	// Update()
-	// Delete()
-	// FindAll()
-	// FindByName()
-	// FindByDate()
+	task_repository.ITaskRepository
 }
 
-func NewRepository(basePath string) IRepository {
+func NewRepository(db *sql.DB) IRepository {
+	task_repo := task_repository.NewTaskRepository(db)
+
 	return &repository{
-		basePath: basePath,
+		ITaskRepository: task_repo,
 	}
 }
