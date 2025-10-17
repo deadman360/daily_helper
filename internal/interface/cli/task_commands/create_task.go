@@ -1,11 +1,11 @@
 package task_commands
 
 import (
-	"github.com/deadman360/daily_helper/internal/usecases/task_usecases"
+	"github.com/deadman360/daily_helper/internal/application/task_application"
 	"github.com/spf13/cobra"
 )
 
-func createTaskCommand(task task_usecases.ITask) *cobra.Command {
+func createTaskCommand(task task_application.ITaskApplication) *cobra.Command {
 	cmd := cobra.Command{
 		Use:   "create",
 		Short: "Create a new Task with timestamps",

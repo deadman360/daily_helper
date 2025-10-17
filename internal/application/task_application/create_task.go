@@ -1,4 +1,4 @@
-package task_usecases
+package task_application
 
 import (
 	"fmt"
