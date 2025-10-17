@@ -5,7 +5,7 @@ import (
 	"github.com/spf13/cobra"
 )
 
-func createTaskCommand(task task_application.ITaskApplication) *cobra.Command {
+func CreateTaskCommand(task task_application.ITaskApplication) *cobra.Command {
 	cmd := cobra.Command{
 		Use:   "create",
 		Short: "Create a new Task with timestamps",
