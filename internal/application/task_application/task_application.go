@@ -5,12 +5,12 @@ import (
 	"github.com/spf13/cobra"
 )
 
-type task struct {
+type task_application struct {
 	repository infrastructure.IRepository
 }
 
 func NewTaskApplication(repository infrastructure.IRepository) ITaskApplication {
-	return &task{
+	return &task_application{
 		repository: repository,
 	}
 }
